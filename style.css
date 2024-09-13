@@ -267,4 +267,81 @@ footer span {
     color: #52e0b6;
     transform: scale(1.1); /* Zoom effect on hover */
 }
+/* Default styles (for larger screens) */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 35%; /* Covers 35% of the screen */
+    height: 100vh;
+    background-color: #0a192f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    /* Change navbar to top position on mobile devices */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; /* Full width */
+        height: 60px; /* Smaller height */
+        flex-direction: row; /* Align items horizontally */
+        justify-content: space-around; /* Distribute links evenly */
+        background-color: #0a192f;
+        padding: 0 10px;
+        z-index: 999; /* Ensure navbar stays on top */
+    }
+
+    /* Adjust the logo positioning */
+    .navbar .logo {
+        margin-bottom: 0;
+        margin-right: auto; /* Align logo to the left */
+    }
+
+    /* Navigation links in horizontal layout */
+    .navbar ul {
+        display: flex;
+        flex-direction: row; /* Display links horizontally */
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar a {
+        font-size: 16px; /* Smaller font for mobile */
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Adjust sections to remove left padding */
+    section {
+        padding-left: 0;
+        padding-top: 70px; /* Add top padding to prevent content hiding under the navbar */
+    }
+
+    /* Hero section adjustments for mobile */
+    .hero {
+        padding-left: 0;
+    }
+
+    /* Project cards stacked on smaller screens */
+    .project-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-card img {
+        margin: 0 auto 20px;
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    /* Other mobile-specific styles if needed */
+}
 
